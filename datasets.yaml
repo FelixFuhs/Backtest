@@ -1,0 +1,140 @@
+datasets:
+  - name: RiskFreeRate
+    source_type: csv
+    identifier: data/risk_free.csv # Assuming your DTB3 data is now risk_free.csv
+    date_column: DATE             # Column name for dates in your CSV
+    value_column: DTB3            # Column name for rate values in your CSV
+    data_frequency: daily
+    description: "3-Month Treasury Bill Rate, sourced from FRED, stored locally as risk_free.csv."
+
+  - name: SP500_ETF_SPY
+    source_type: yfinance
+    identifier: SPY
+    start_date: "1993-01-29" # SPDR S&P 500 ETF inception date
+    data_fields:
+      - Open
+      - High
+      - Low
+      - Close
+      - Adj Close
+      - Volume
+    description: "SPDR S&P 500 ETF Trust (SPY), sourced from Yahoo Finance."
+
+  - name: Gold_ETF_GLD
+    source_type: yfinance
+    identifier: GLD
+    start_date: "2004-11-18" # SPDR Gold Shares inception date
+    data_fields:
+      - Open
+      - High
+      - Low
+      - Close
+      - Adj Close
+      - Volume
+    description: "SPDR Gold Shares ETF (GLD), sourced from Yahoo Finance."
+
+  - name: LongTermTreasury_ETF_TLT
+    source_type: yfinance
+    identifier: TLT
+    start_date: "2002-07-22" # iShares 20+ Year Treasury Bond ETF inception date
+    data_fields:
+      - Open
+      - High
+      - Low
+      - Close
+      - Adj Close
+      - Volume
+    description: "iShares 20+ Year Treasury Bond ETF (TLT), sourced from Yahoo Finance."
+
+  - name: LongTermTIPS_ETF_LTPZ
+    source_type: yfinance
+    identifier: LTPZ
+    start_date: "2009-09-03" # PIMCO 15+ Year U.S. TIPS Index ETF inception date
+    data_fields:
+      - Open
+      - High
+      - Low
+      - Close
+      - Adj Close
+      - Volume
+    description: "PIMCO 15+ Year U.S. TIPS Index ETF (LTPZ), sourced from Yahoo Finance."
+
+  - name: ShortTermTreasury_ETF_SHY
+    source_type: yfinance
+    identifier: SHY
+    start_date: "2002-07-22" # iShares 1-3 Year Treasury Bond ETF inception date
+    data_fields:
+      - Open
+      - High
+      - Low
+      - Close
+      - Adj Close
+      - Volume
+    description: "iShares 1-3 Year Treasury Bond ETF (SHY), sourced from Yahoo Finance."
+
+  - name: TIPS_Bond_ETF_TIP
+    source_type: yfinance
+    identifier: TIP
+    start_date: "2003-12-04" # iShares TIPS Bond ETF inception date
+    data_fields:
+      - Open
+      - High
+      - Low
+      - Close
+      - Adj Close
+      - Volume
+    description: "iShares TIPS Bond ETF (TIP), sourced from Yahoo Finance."
+
+  - name: Bitcoin_USD
+    source_type: yfinance
+    identifier: BTC-USD
+    start_date: "2014-09-17" # Common start for comprehensive BTC-USD data on Yahoo Finance
+    data_fields:
+      - Open
+      - High
+      - Low
+      - Close
+      - Adj Close
+      - Volume
+    description: "Bitcoin to USD exchange rate (BTC-USD), sourced from Yahoo Finance."
+
+  - name: EnergySector_ETF_XLE
+    source_type: yfinance
+    identifier: XLE
+    start_date: "1998-12-22" # Energy Select Sector SPDR Fund inception (data often from first trading day)
+    data_fields:
+      - Open
+      - High
+      - Low
+      - Close
+      - Adj Close
+      - Volume
+    description: "Energy Select Sector SPDR Fund (XLE), sourced from Yahoo Finance."
+
+  - name: TechnologySector_ETF_XLK
+    source_type: yfinance
+    identifier: XLK
+    start_date: "1998-12-22" # Technology Select Sector SPDR Fund inception (data often from first trading day)
+    data_fields:
+      - Open
+      - High
+      - Low
+      - Close
+      - Adj Close
+      - Volume
+    description: "Technology Select Sector SPDR Fund (XLK), sourced from Yahoo Finance."
+
+  - name: FinancialSector_ETF_XLF
+    source_type: yfinance
+    identifier: XLF
+    start_date: "1998-12-22" # Financial Select Sector SPDR Fund inception (data often from first trading day)
+    data_fields:
+      - Open
+      - High
+      - Low
+      - Close
+      - Adj Close
+      - Volume
+    description: "Financial Select Sector SPDR Fund (XLF), sourced from Yahoo Finance."
+
+# You can continue to add more datasets here following the same pattern.

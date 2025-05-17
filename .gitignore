@@ -1,0 +1,11 @@
+# Cache files
+cache/
+
+# Python bytecode
+*.pyc
+__pycache__/
+
+# IDE and OS specific files (examples)
+.vscode/
+.idea/
+.DS_Store
